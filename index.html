@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- this section contains all my meta tag and the link to the external css and cdn -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Global timer </title>
+	<link rel="stylesheet" type="text/css" href="global-timer.css">
+
+	<!-- link to google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+
+<body>
+
+	<div class="upload-container" style="display: none">
+		
+		<!-- background file input -->
+		<input type="file" id="backgroundInput" class="file-input" accept="image/*">
+
+
+		<!-- background upload button -->
+		<label for="backgroundInput" class="upload-btn">Choose Image</label>
+
+		<!-- reset button to go back to default gradient background -->
+		<button class="reset-btn" onclick="resetBackground()">Reset Background</button>
+
+		<div id="fileName" class="file-name"></div>
+	</div>
+
+	<!-- This section contains the header logo and the dynamic program title -->
+	<div class="header">
+		<!-- logo -->
+		<did class="logo">
+			<img src="">
+		</did>
+
+		<!-- program title -->
+		<div class="header">
+			<h1>Program Title</h1>
+		</div>
+
+	</div>
+
+
+	<!-- This section contains the side navigation of the app -->
+	<div class="right-side-nav" style="display: none;">
+
+		<div class="box">
+			<ul>
+			  <li><button>Home</button></li>
+			  <li><button>Change Logo</button></li>
+			  <li><button>Change Background</button></li>
+			  <li><button>Reset Timer</button></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- This section displays timer -->
+	<div class="timer-container" id="timerContainer">
+		
+		<div class="time">
+			<h3 class="hour" id="hour">23</h3> : 
+			<h3 class="minutes" id="minutes"> 59</h3> :
+			<h3 class="seconds" id="seconds"> 59</h3>
+		</div>	
+
+		<!-- this section contains start button, reset button and stop button -->
+			<div class="button">
+				<button class="start-btn" id="startBTN">Start</button>
+				<button class="timereset-btn" id="resetBTN">Reset</button>
+				<button class="stop-btn" id="stopBTN">Reset</button>
+			</div>
+
+	</div>
+
+	<!-- This section displays time up when the time elapse -->
+	<div class="timeup-container" id="timeupContainer">
+		<h1>Time's Up</h1>	
+
+	</div>
+
+	
+
+<script type="text/javascript" src="global-timer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	min-height: 100vh;
+	/*	default gradient background*/
+	background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+	/*	Add background properties for uploaded images*/
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* Smooth transition for background changes */
+	transition: background 0.5s ease;
+
+	/*	Center content*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: Poppins, montserrat;
+	color: #fff;
+	text-align: center;
+}
+
+
+.header{
+	font-size: 35px;
+	font-weight: bold;
+	margin-top: -70px;
+}
+
+/*Container for the upload section*/
+.upload-container{
+	background: rgba(0,0,0,0.5);
+	padding: 20px;
+	border-radius: 10px;
+	margin: 20px;
+	max-width: 400px;
+}
+
+.timer-container{
+	background: rgba(0,0,0,0.4);
+	padding: 20px;
+	border-radius: 10px;
+	margin: 20px;
+	max-width: 600px;
+}
+
+/*timeup container style*/
+.timeup-container{
+	background: rgba(255,0,0,0.5);
+	padding: 20px;
+	border-radius: 10px;
+	margin: 20px;
+	max-width: 400px;
+	display: none;
+}
+
+.timer-container .time{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 100px;
+	font-size: 75px;
+	font-family: Upper Clock Solid;
+	
+}
+
+.timer-container .time h3{
+	
+}
+
+.start-btn, .timereset-btn, .stop-btn{
+	padding: 5px 10px;
+	font-size: 18px;
+	background: rgba(255, 255, 255, 0.2);
+	border: 1px solid #fff;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: inline-block;
+	margin: 10px;
+}
+
+
+
+/*title styles*/
+.title{
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+/*styles for the input*/
+.file-input{
+	display: none;
+}
+
+/*style for the custom upload button*/
+.upload-btn, .reset-btn{
+	padding: 15px 30px;
+	font-size: 18px;
+	background: rgba(255, 255, 255, 0.2);
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: inline-block;
+	margin: 10px;
+}
+
+/*button hover effect*/
+.upload-btn:hover{
+	background: rgba(255, 255, 255, 0.2);
+	transform: scale(1.06);
+}
+
+.reset-btn:hover{
+	background: rgba(255, 255, 255, 0.3);
+	transform: scale(1.06);
+}
+
+/*style for the selected filename display*/
+.file-name{
+	margin-top: 10px;
+	font-size: 14px;
+	word-break: break-all;
+}
+
