@@ -3,6 +3,18 @@ const backgroundInput = document.getElementById('backgroundInput');
 const fileNameDisplay = document.getElementById('fileName');
 
 
+const logoInput = document.getElementById('logoInput')
+
+logoInputFunction = (upload) =>{
+	const file = upload.target.file[0];
+
+	const reader = new FileReader();
+	reader.onload = function(ev){
+		document.logoInput.style.display = 'block';
+	}
+}
+
+
 // default gradient backgroundInput
 const defaultBackground = 'linear-gradient(45deg, #ff6b6b, $4ecdc4)'
 
@@ -29,7 +41,7 @@ backgroundInput.addEventListener('change', function(event){
 
 		// read the image file
 		reader.readAsDataURL(file);
-		console.log(backgroundInput.value);
+		console.log(backgroundInput.value); 
 	}
 });
 
