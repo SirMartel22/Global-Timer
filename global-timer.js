@@ -56,3 +56,30 @@ function resetBackground(){
 	fileNameDisplay.textContent = '';
 	console.log(backgroundInput.value)
 }
+
+
+//Side navigation code
+
+//get side navigation button
+const sideNavBtns = document.querySelectorAll('.right-side-nav button');
+const uploadContainer = document.querySelector('.upload-container');
+const rightSideNav = document.querySelector('.right-side-nav');
+
+// show side navigation
+rightSideNav.style.display = 'block';
+
+//add click handlers for side navigation
+
+sideNavBtns.forEach(btn => {
+	btn.addEventListener('click', function(){
+		switch(this.textContent){
+			case 'Change Background':
+				uploadContainer.style.display = 
+					uploadContainer.style.display === 'none' ? 'block' : 'none';
+				break;
+			
+				case 'Reset Timer':
+					
+		}
+	})
+})
