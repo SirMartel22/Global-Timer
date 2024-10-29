@@ -15,9 +15,14 @@
 
 <body>
 
+	<!-- This section contains the logo input and preview -->
 	<div class="logo-container">
 		<!-- logo file input  -->
-		<input type="file" id="logoInput" class="logo-input" accept="image/*">
+		<input type="file" id="logoInput" accept="image/*">
+
+		<div class="logo">
+			<img id="preview-logo" class="preview-image">
+		</div>
 	</div>
 
 
@@ -39,32 +44,27 @@
 
 	<!-- This section contains the header logo and the dynamic program title -->
 	<div class="header">
-		<!-- logo -->
-		<did class="logo">
-			<img src="">
-		</did>
-
 		<!-- program title -->
-		<div class="header">
+		<div class="showTitleInput" id="showTitleInput">
 			<label for="Program Title"></label>
 			<input type="text" id="pTitle" placeholder="Kindly enter the program title">
-			
-			<button id="titleGenerator"> Generate Title </button>
+			<button id="generate"> Generate Title </button>
 		</div>
 
-		<div class="timerTitle" id="timerTitlle">
+		<div class="header" id="timerTitle">
 			
 		</div>
 
 	</div>
 
 	<!-- This section contains the side navigation of the app -->
-	<div class="right-side-nav" style="display: none;">
+	<div class="right-side-nav">
 
 		<div class="box">
 			<ul>
 			  <li><button>Home</button></li>
-			  <li><button>Change Logo</button></li>
+			  <li><button id="generateTitle"> Generate Title </button></li>
+			  <li><button id="uploadLogo">Change Logo</button></li>
 			  <li><button>Change Background</button></li>
 			  <li><button>Reset Timer</button></li>
 			</ul>
