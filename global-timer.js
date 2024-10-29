@@ -10,8 +10,12 @@ logoInputFunction = (upload) =>{
 
 	const reader = new FileReader();
 	reader.onload = function(ev){
-		document.logoInput.style.display = 'block';
+		// display logo when uploaded
+		document.logoInput.style.display = `url('${ev.target.result}')`;
 	}
+	
+	reader.readAsDataURL(file)
+
 }
 
 
@@ -79,7 +83,7 @@ sideNavBtns.forEach(btn => {
 				break;
 			
 				case 'Reset Timer':
-					
+
 		}
 	})
 })
