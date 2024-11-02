@@ -115,7 +115,12 @@ body{
 	display: flex;
 	font-size: 50px;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
+	margin-right: 30px;
+}
+
+.timer-container .timerP p{
+	margin-right: 40px;
 }
 
 .timer-container .timerCounter{
@@ -124,6 +129,12 @@ body{
 	align-items: center;
 }
 
+.timer-container .timerCounter input[type="number"]{
+	text-align: center;
+	background: none;
+	border: 1px solid #87CEEB;
+	border-radius: 10px;
+}
  /* timer font size for large displays */
 @media screen and (min-width: 1920){
 	.timer-container .time{
