@@ -101,14 +101,29 @@ body{
 
 .timer-container .time{
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 70px;
+	padding: 10px;
 	font-size: 150px;
 	font-family: Upper Clock Solid;
 	color: #87CEEB;
 	
 }
+
+.timer-container .timerP{
+	display: flex;
+	font-size: 50px;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.timer-container .timerCounter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
  /* timer font size for large displays */
 @media screen and (min-width: 1920){
 	.timer-container .time{

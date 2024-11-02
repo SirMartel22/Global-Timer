@@ -26,8 +26,6 @@
 	</div>
 
 
-
-
 	<div class="upload-container" style="display: none">
 		
 		<!-- background file input -->
@@ -76,10 +74,25 @@
 	<div class="timer-container" id="timerContainer">
 		
 		<div class="time">
-			<h3 class="hour" id="hour">23</h3> : 
+			
+		<div class="timerP">
+			<p id="hour_label" class="label">Hours</p> <p id="min-label" class="label">Minutes</p> <p id="sec-label" class="label">Seconds</p> 
+		</div>
+
+		<div class="timerCounter">
+			<input id="hour" type="number" max="99" min="0" value="0" class="time"><p id="p1" class="semicolon">:</p>
+				<input id="minute" type="number" max="60" min="0" value="0" class="time"><p id="p2" class="semicolon">:</p>
+				<input id="seconds" type="number" max="60" min="0" value="0" class="time">
+		</div>
+				
+
+			
+			
+			<!-- <h3 class="hour" id="hour">23</h3> : 
 			<h3 class="minutes" id="minutes"> 59</h3> :
-			<h3 class="seconds" id="seconds"> 59</h3>
+			<h3 class="seconds" id="seconds"> 59</h3> -->
 		</div>	
+		
 
 		<!-- this section contains start button, reset button and stop button -->
 			<div class="button">

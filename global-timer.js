@@ -133,3 +133,60 @@ bgChangeBtn.addEventListener('click', ()=>{
 		}
 	});
 });
+
+
+// countdown timer js code
+const start = document.getElementById('startBTN');
+const reset = document.getElementById('resetBTN');
+const hour = document.getElementById('hour');
+const minutes = document.getElementById('minute')
+const seconds = document.getElementById('seconds')
+
+
+//store a reference to the variable
+let startTimer = null;
+
+function timer(){
+	if(hour.value == 0 && minutes.value == 0 && seconds.value == 0){
+		hour.value = 0;
+		minutes.value = 0;
+		seconds.value = 0;
+	}else if(seconds.value != 0	){
+		seconds.value --;
+	} else if( minutes.value != 0 && seconds.value == 0){
+		seconds.value = 59;
+		minutes.value --;
+	} else if(hour.value != 0 && minutes.value == 0){
+		minutes.value = 60;
+        hour.value --;
+	}
+	return;
+}
+
+reset.addEventListener('click', ()=>{
+function stopTimer(){
+	clearInterval(startTimer);
+}
+
+stopTimer();
+hour.value = 0;
+minutes.value = 0;
+seconds.value = 0;
+	console.log("Timer reset")
+});
+
+
+
+
+
+start.addEventListener('click', ()=>{
+	//initialize the variable startTimer
+    // startTimer = setInterval(timer, 1000);
+
+	function startInterval(){
+		startTimer = setInterval(function(){
+			timer();
+		}, 1000)
+	}
+	startInterval();
+});
