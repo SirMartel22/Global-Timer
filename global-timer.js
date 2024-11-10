@@ -28,7 +28,6 @@ showTitleInput.style.display = 'none'
 		console.log(title);
 	});
 
-	
 
     // event listener for uploading a logo image
 	
@@ -174,9 +173,6 @@ minutes.value = 0;
 seconds.value = 0;
 	console.log("Timer reset")
 });
-
-
-
 
 
 start.addEventListener('click', ()=>{
