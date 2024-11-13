@@ -94,6 +94,8 @@ rightSideNav.style.display = 'block';
 //code for changing the background of the timer
 	const backgroundInput = document.getElementById('backgroundInput');
 	const fileNameDisplay = document.getElementById('fileName');
+	const bgOverlay = document.querySelector('.overlay')
+	
 	
 // default gradient backgroundInput
 const defaultBackground = 'linear-gradient(45deg, #ff6b6b, $4ecdc4)'
@@ -120,12 +122,15 @@ bgChangeBtn.addEventListener('click', ()=>{
 				document.body.style.backgroundSize = 'cover';
 				document.body.style.bakcgroundPosition = 'center';
 				document.body.style.backgroundRepeat = 'no-repeat';
+				document.body.style.zIndex = '1';
+				bgOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
 			};
 
 			// read the image file
 			reader.readAsDataURL(file);
 			console.log(backgroundInput.value); 
 			uploadContainer.style.display ='none';
+
 		}
 	});
 });

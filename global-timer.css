@@ -14,7 +14,6 @@ body{
 	background-repeat: no-repeat;
 	/* Smooth transition for background changes */
 	transition: background 0.5s ease;
-
 	/*	Center content*/
 	display: flex;
 	flex-direction: column;
@@ -25,6 +24,10 @@ body{
 	text-align: center;
 }
 
+.overlay{
+	width: 100vw;
+	height: 100vh;
+}
 
 .header{
 	font-size: 35px;
@@ -64,11 +67,14 @@ body{
 	font-size: 18px;
 	font-family: 'gill sans mt';
 	margin-right: 30px;
+}
 
+.showTitleInput{
+	margin-top: -10px;
+	margin-bottom: 50px;
 }
 
 .showTitleInput input[type="text"]{
-	margin-top: -100px;
 	width: 300px;
 	height: 50px;
 	border: 1px solid aqua;
@@ -76,6 +82,7 @@ body{
 	border-radius: 10px;
 	background: none;
 	text-align: center;
+	margin-bottom: 50px;
 }
 
 .showTitleInput button{
@@ -110,11 +117,15 @@ body{
 }
 
 .timer-container{
-	background: rgba(0,0,0,0.4);
-	padding: 10px;
+	background: rgba(0,0,0,0.6);
+	padding: 50px;
 	border-radius: 10px;
 	margin: 10px;
-	max-width: 70%;
+	max-width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 /*timeup container style*/
@@ -136,7 +147,6 @@ body{
 	font-size: 150px;
 	font-family: Upper Clock Solid;
 	color: #87CEEB;
-	
 }
 
 .timer-container .timerP{
