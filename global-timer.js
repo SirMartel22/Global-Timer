@@ -65,9 +65,7 @@ showTitleInput.style.display = 'none'
 			console.log(logoInput.value)
 			logoInput.style.display ='none';
 		}
-	})
-
-	
+	});
 
 //Function to reset background to default gradient
 function resetBackground(){
@@ -79,7 +77,6 @@ function resetBackground(){
 	fileNameDisplay.textContent = '';
 	console.log(backgroundInput.value)
 }
-
 
 //Side navigation code
 
