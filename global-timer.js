@@ -26,7 +26,10 @@ showTitleInput.style.display = 'none'
 		
 		// log the generated program title for debugging purposes
 		console.log(title);
-	});
+	})
+
+
+
 
 
     // event listener for uploading a logo image
@@ -45,8 +48,7 @@ showTitleInput.style.display = 'none'
 
 	uploadLogo.addEventListener('click', function(){
 		logoInput.style.display ='block';
-	});
-
+	
 	logoInput.addEventListener('change', function(ev){
 		const file = ev.target.files[0];
 
@@ -66,6 +68,11 @@ showTitleInput.style.display = 'none'
 			logoInput.style.display ='none';
 		}
 	});
+});
+
+
+
+
 
 //Function to reset background to default gradient
 function resetBackground(){
@@ -78,41 +85,32 @@ function resetBackground(){
 	console.log(backgroundInput.value)
 }
 
-//Side navigation code
 
+
+
+//Side navigation code
 //get side navigation button
 const bgChangeBtn = document.getElementById('bgchange');
-const uploadContainer = document.querySelector('.upload-container');
+// const uploadContainer = document.querySelector('.upload-container');
 const rightSideNav = document.querySelector('.right-side-nav');
 
 // show side navigation
 rightSideNav.style.display = 'block';
 
-
-//background change code
-
 //code for changing the background of the timer
-	const backgroundInput = document.getElementById('backgroundInput');
-	const fileNameDisplay = document.getElementById('fileName');
+	const backgroundInput = document.getElementById('upload-btn');
 	const bgOverlay = document.querySelector('.overlay')
 	
 	
 // default gradient backgroundInput
 const defaultBackground = 'linear-gradient(45deg, #ff6b6b, $4ecdc4)'
 
-bgChangeBtn.addEventListener('click', ()=>{
-	uploadContainer.style.display = 'block';
-
 		// listen for file selection
-	backgroundInput.addEventListener('change', function(event){
+	backgroundInput.addEventListener('change', (event)=>{
 		const file = event.target.files[0];
 
 		// check if a file was selected
 		if (file) {
-			// display selected file name
-
-			fileNameDisplay.textContent = `selected: ${file.name}`;
-
 			// create file reader to read the image
 			const reader = new FileReader();
 
@@ -120,7 +118,7 @@ bgChangeBtn.addEventListener('click', ()=>{
 				// set the background image when file is loaded
 				document.body.style.background = `url('${e.target.result}')`
 				document.body.style.backgroundSize = 'cover';
-				document.body.style.bakcgroundPosition = 'center';
+				document.body.style.backgroundPosition = 'center';
 				document.body.style.backgroundRepeat = 'no-repeat';
 				document.body.style.zIndex = '1';
 				bgOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
@@ -129,19 +127,17 @@ bgChangeBtn.addEventListener('click', ()=>{
 			// read the image file
 			reader.readAsDataURL(file);
 			console.log(backgroundInput.value); 
-			uploadContainer.style.display ='none';
-
+			// uploadContainer.style.display ='none';
 		}
 	});
-});
-
 
 // countdown timer js code
 const start = document.getElementById('startBTN');
 const reset = document.getElementById('resetBTN');
 const hour = document.getElementById('hour');
-const minutes = document.getElementById('minute')
-const seconds = document.getElementById('seconds')
+const minutes = document.getElementById('minute');
+const seconds = document.getElementById('seconds');
+const timerContainer = document.getElementById('timerContainer')
 
 
 //store a reference to the variable
@@ -158,8 +154,9 @@ function timer(){
 		seconds.value = 59;
 		minutes.value --;
 	} else if(hour.value != 0 && minutes.value == 0){
-		minutes.value = 60;
+		minutes.value = 59;
         hour.value --;
+		timerContainer.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'
 	}
 	return;
 }
