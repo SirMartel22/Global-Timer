@@ -131,97 +131,89 @@ const defaultBackground = 'linear-gradient(45deg, #ff6b6b, $4ecdc4)'
 		}
 	});
 
-// countdown timer js code
-// const start = document.getElementById('startBTN');
-// const reset = document.getElementById('resetBTN');
-// const hour = document.getElementById('hour');
-// const minutes = document.getElementById('minute');
-// const seconds = document.getElementById('seconds');
-// const timerContainer = document.getElementById('timerContainer')
-
-
-//store a reference to the variable
-// let startTimer = null;
-
-// function timer(){
-// 	if(hour.value == 0 && minutes.value == 0 && seconds.value == 0){
-// 		hour.value = 0;
-// 		minutes.value = 0;
-// 		seconds.value = 0;
-// 	}else if(seconds.value != 0	){
-// 		seconds.value --;
-// 	} else if( minutes.value != 0 && seconds.value == 0){
-// 		seconds.value = 59;
-// 		minutes.value --;
-// 	} else if(hour.value != 0 && minutes.value == 0){
-// 		minutes.value = 59;
-//         hour.value --;
-// 		timerContainer.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'
-// 	}
-// 	return;
-// }
 
 // trying to figure out how to make the timer work in another way
 
+let hour = document.getElementById('hour');
+let minutes = document.getElementById('minute');
+let seconds = document.getElementById('seconds');
 
-const startBtn = document.getElementById('startBtn');
+let startBtn = document.getElementById('startBtn');
+let resetBtn = document.getElementById('resetBtn');
+
+const timerContainer= document.getElementById('timerContainer')
+
+const timeUpShow = document.getElementById('timeupContainer')
+
+
+var interval = null;
+var total = 0;
+
+// totalValue = ()=>{
+// 	total = Number(hour.value) * 3600 + 
+// 	Number(minutes.value) * 60 + 
+// 	Number(seconds.value)
+// }
+
+function calculateTotalSeconds(){
+	return Number(hour.value) * 3600 +
+			Number(minutes.value) * 60 +
+			Number(seconds.value);
+}
+
+function updateTimer(){
+	total --;
+	if (total >= 0){
+		let hr = Math.floor(total / 3600);
+		let mt = Math.floor((total % 3600) / 60);
+		let sc = total % 60;
+
+		hour.value = hr.toString().padStart(2, '0');
+		minutes.value = hr.toString().padStart(2, '0');
+		seconds.value = hr.toString().padStart(2, '0');
+	} else {
+		clearInterval(interval);
+		timerContainer.style.display = 'none';
+		timeUpShow.style.display = 'block';
+	}
+}
+
+
+// timer = () =>{
+// 	totalValue();
+// 	total --
+// 	if (total >=0){
+// 		// var hr = Math.floor(total/3600);
+// 		// var mt = Math.floor((total/60) - (hr*60));
+// 		// var sc = Math.floor((hr*3600) + (mt*60));
+
+// 		var hr = Math.floor(total / 3600);
+// 		var mt = Math.floor((total % 60) / 60 );
+// 		var sc = total % 60;
+
+
+// 		hour.value = hr;
+// 		minutes.value = mt;
+// 		seconds.value = sc;
+// 	}
+// 	else{
+// 		timerContainer.style.display = 'none';
+// 		timeUpShow.style.display = 'block';
+// 	}
+// }
 
 startBtn.addEventListener('click', ()=>{
-	let hour = document.getElementById('hour').value;
-	let min = document.getElementById('minute').value;
-	let sec = document.getElementById('seconds').value;
-
-	// console.log(hour);
-	// console.log(min);
-	// console.log(sec);
-	// console.log(txt);
-	// console.log('button is working')
-
-	const startTimer = null;
-	let time = startTimer * 60;
-
-
-	// const countdownEl = document.getElementById('countdown');
-	setInterval(updateCountdown, 1000);
-
-	function updateCountdown(){
-		const minutes = Math.floor(time/60);
-		let seconds = time % 60;
-
-		// hour.innerHTML = `${hour}` 
-		min.innerHTML = `${minutes}:`;
-		sec.innerHTML =`${seconds}`
-		time--
-	}
-
-	updateCountdown();
+	console.log('button is working!!')
+	clearInterval(interval);
+	interval = setInterval(updateTimer, 1000);
 });
 
 
-const resetBtn = document.getElementById('resetBtn');
-	resetBtn.addEventListener('click', ()=>{
-	function stopTimer(){
-		clearInterval(startTimer);
-}
 
-stopTimer();
+resetBtn.addEventListener('click', ()=>{
+	clearInterval(interval);
 	hour.value = 0;
 	minutes.value = 0;
 	seconds.value = 0;
-		console.log("Timer reset")
+	console.log("Timer reset")
 });
-
-
-// startBtn.addEventListener('click', ()=>{
-// 	//initialize the variable startTimer
-//     // startTimer = setInterval(timer, 1000);
-
-// 	function startInterval(){
-// 		startTimer = setInterval(function(){
-// 			timer();
-// 		}, 1000)
-// 	}
-// 	startInterval();
-// });
-
-
