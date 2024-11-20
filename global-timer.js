@@ -132,56 +132,96 @@ const defaultBackground = 'linear-gradient(45deg, #ff6b6b, $4ecdc4)'
 	});
 
 // countdown timer js code
-const start = document.getElementById('startBTN');
-const reset = document.getElementById('resetBTN');
-const hour = document.getElementById('hour');
-const minutes = document.getElementById('minute');
-const seconds = document.getElementById('seconds');
-const timerContainer = document.getElementById('timerContainer')
+// const start = document.getElementById('startBTN');
+// const reset = document.getElementById('resetBTN');
+// const hour = document.getElementById('hour');
+// const minutes = document.getElementById('minute');
+// const seconds = document.getElementById('seconds');
+// const timerContainer = document.getElementById('timerContainer')
 
 
 //store a reference to the variable
-let startTimer = null;
+// let startTimer = null;
 
-function timer(){
-	if(hour.value == 0 && minutes.value == 0 && seconds.value == 0){
-		hour.value = 0;
-		minutes.value = 0;
-		seconds.value = 0;
-	}else if(seconds.value != 0	){
-		seconds.value --;
-	} else if( minutes.value != 0 && seconds.value == 0){
-		seconds.value = 59;
-		minutes.value --;
-	} else if(hour.value != 0 && minutes.value == 0){
-		minutes.value = 59;
-        hour.value --;
-		timerContainer.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'
+// function timer(){
+// 	if(hour.value == 0 && minutes.value == 0 && seconds.value == 0){
+// 		hour.value = 0;
+// 		minutes.value = 0;
+// 		seconds.value = 0;
+// 	}else if(seconds.value != 0	){
+// 		seconds.value --;
+// 	} else if( minutes.value != 0 && seconds.value == 0){
+// 		seconds.value = 59;
+// 		minutes.value --;
+// 	} else if(hour.value != 0 && minutes.value == 0){
+// 		minutes.value = 59;
+//         hour.value --;
+// 		timerContainer.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'
+// 	}
+// 	return;
+// }
+
+// trying to figure out how to make the timer work in another way
+
+
+const startBtn = document.getElementById('startBtn');
+
+startBtn.addEventListener('click', ()=>{
+	let hour = document.getElementById('hour').value;
+	let min = document.getElementById('minute').value;
+	let sec = document.getElementById('seconds').value;
+
+	// console.log(hour);
+	// console.log(min);
+	// console.log(sec);
+	// console.log(txt);
+	// console.log('button is working')
+
+	const startTimer = null;
+	let time = startTimer * 60;
+
+
+	// const countdownEl = document.getElementById('countdown');
+	setInterval(updateCountdown, 1000);
+
+	function updateCountdown(){
+		const minutes = Math.floor(time/60);
+		let seconds = time % 60;
+
+		// hour.innerHTML = `${hour}` 
+		min.innerHTML = `${minutes}:`;
+		sec.innerHTML =`${seconds}`
+		time--
 	}
-	return;
-}
 
-reset.addEventListener('click', ()=>{
-function stopTimer(){
-	clearInterval(startTimer);
+	updateCountdown();
+});
+
+
+const resetBtn = document.getElementById('resetBtn');
+	resetBtn.addEventListener('click', ()=>{
+	function stopTimer(){
+		clearInterval(startTimer);
 }
 
 stopTimer();
-hour.value = 0;
-minutes.value = 0;
-seconds.value = 0;
-	console.log("Timer reset")
+	hour.value = 0;
+	minutes.value = 0;
+	seconds.value = 0;
+		console.log("Timer reset")
 });
 
 
-start.addEventListener('click', ()=>{
-	//initialize the variable startTimer
-    // startTimer = setInterval(timer, 1000);
+// startBtn.addEventListener('click', ()=>{
+// 	//initialize the variable startTimer
+//     // startTimer = setInterval(timer, 1000);
 
-	function startInterval(){
-		startTimer = setInterval(function(){
-			timer();
-		}, 1000)
-	}
-	startInterval();
-});
+// 	function startInterval(){
+// 		startTimer = setInterval(function(){
+// 			timer();
+// 		}, 1000)
+// 	}
+// 	startInterval();
+// });
+
+

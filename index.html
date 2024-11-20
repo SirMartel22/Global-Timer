@@ -75,24 +75,28 @@
 			
 		<div class="timerP">
 			<p style="margin-right: 90px;" id="hour_label" class="label">Hours</p> 
-			    <p style="margin-right: 100px; margin-left: 50px;" id="min-label" class="label">Minutes</p> 
-			        <p id="sec-label" class="label">Seconds</p> 
+			<p style="margin-right: 100px; margin-left: 50px;" id="min-label" class="label">Minutes</p> 
+			<p id="sec-label" class="label">Seconds</p> 
 		</div>
 
 		<div class="timerCounter">
-			<input id="hour" type="number" max="99" min="0" value="0" class="time"><p id="p1" class="semicolon">:</p>
-				<input id="minute" type="number" max="60" min="0" value="0" class="time"><p id="p2" class="semicolon">:</p>
-				<input id="seconds" type="number" max="60" min="0" value="0" class="time">
+			<!-- <input id="hour" type="number" max="99" min="0" value="0" class="time"><p id="p1" class="semicolon">:</p>
+			<input id="minute" type="number" max="60" min="0" value="0" class="time"><p id="p2" class="semicolon">:</p>
+			<input id="seconds" type="number" max="60" min="0" value="0" class="time"> -->
+
+			<input id="hour" type="number" max="99" min="0" class="time" placeholder="00"><p id="p1" class="semicolon">:</p>
+			<input id="minute" type="number" max="60" min="0"  class="time" placeholder="00"><p id="p2" class="semicolon">:</p>
+			<input id="seconds" type="number" max="60" min="0"  class="time" placeholder="00">
+
 		</div>
 				
 	</div>	
 		
-
 		<!-- this section contains start button, reset button and stop button -->
 			<div class="button">
-				<button class="start-btn" id="startBTN">Start</button>
-				<button class="timereset-btn" id="resetBTN">Reset</button>
-				<button class="stop-btn" id="stopBTN">Stop</button>
+				<button class="start-btn" id="startBtn">Start</button>
+				<button class="timereset-btn" id="resetBtn">Reset</button>
+				<button class="stop-btn" id="stopBtn">Stop</button>
 			</div>
 
 	</div>
@@ -106,7 +110,7 @@
 	</div>
 
 	
-<script type="text/javascript" src="global-timer.js"></script>
+<script type="text/javascript"src="global-timer.js"></script>
 </body>
 
 </html>

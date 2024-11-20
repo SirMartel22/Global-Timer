@@ -172,6 +172,7 @@ body{
 	background: none;
 	border: 1px solid #87CEEB;
 	border-radius: 10px;
+	width: 30%;
 }
  /* timer font size for large displays */
 @media screen and (min-width: 1920px){
