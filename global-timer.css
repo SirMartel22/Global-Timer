@@ -51,15 +51,19 @@ body{
 }
 
 .right-side-nav .box ul{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	list-style: none;
 }
 
 .right-side-nav .box ul li{
-	margin: 15px 0;
+	margin: 20px 0;
 }
 
-.right-side-nav .box button{
-	width: 100px;
+.right-side-nav .box button, .right-side-nav .box li label{
+	width: 150px;
 	padding: 19px 13px;
 	background: rgba(255, 255, 255, 0.1);
 	border: 1px solid rgba(255, 255, 255, 0.3);
@@ -71,6 +75,11 @@ body{
 	font-family: 'gill sans mt';
 	margin-right: 30px;
 }
+
+/* .right-side-nav .box li label{
+	margin-top: 30px;
+	margin-bottom: 50px;
+} */
 
 .showTitleInput{
 	margin-top: -10px;

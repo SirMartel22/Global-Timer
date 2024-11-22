@@ -18,7 +18,7 @@
 	<!-- This section contains the logo input and preview -->
 	<div class="logo-container">
 		<!-- logo file input  -->
-		<input type="file" id="logoInput" accept="image/*">
+		<input type="file" id="logoInput" class="file-input" accept="image/*">
 
 		<div class="logo">
 			<img id="preview-logo" class="preview-image">
@@ -30,9 +30,6 @@
 		
 		<!-- background file input -->
 		<input type="file" id="backgroundInput" class="file-input" accept="image/*">
-
-		<!-- background upload button -->
-		<!-- <label for="backgroundInput" class="upload-btn">Choose Image</label> -->
 
 		<!-- reset button to go back to default gradient background -->
 		<button class="reset-btn" onclick="resetBackground()">Reset Background</button>
@@ -61,8 +58,9 @@
 		<div class="box">
 			<ul>
 			  <li><button id="generateTitle"> Add Title </button></li>
-			  <li><button id="uploadLogo">Import Logo</button></li>
-			  <label for="backgroundInput" id="upload-btn">Add Background</label>
+			  <!-- <li><button id="uploadLogo">Import Logo</button></li> -->
+			  <li><label for="backgroundInput" id="upload-btn">Add Background</label></li>
+			  <li><label for="logoInput" id="uploadLogoBtn">Add Logo</label></li>
 			</ul>
 		</div>
 
@@ -80,9 +78,6 @@
 		</div>
 
 		<div class="timerCounter">
-			<!-- <input id="hour" type="number" max="99" min="0" value="0" class="time"><p id="p1" class="semicolon">:</p>
-			<input id="minute" type="number" max="60" min="0" value="0" class="time"><p id="p2" class="semicolon">:</p>
-			<input id="seconds" type="number" max="60" min="0" value="0" class="time"> -->
 
 			<input id="hour" type="number" min="0" class="time" placeholder="00"><p id="p1" class="semicolon">:</p>
 			<input id="minute" type="number" max="59" min="0"  class="time" placeholder="00"><p id="p2" class="semicolon">:</p>

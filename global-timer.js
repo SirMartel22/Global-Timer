@@ -34,19 +34,12 @@ showTitleInput.style.display = 'none'
     // event listener for uploading a logo image
 	
 	//get the value of logo input and get it to show when a logo is selected
-	const logoInput = document.getElementById('logoInput');
-
-
 	const previewLogo = document.getElementById('preview-logo');
-	const logoInput1 = document.getElementById('logoInput')
+	const logoInput = document.getElementById('logoInput')
 
-	logoInput1.style.display = 'none';
 
 	const uploadLogo = document.getElementById('uploadLogo')
 	
-
-	uploadLogo.addEventListener('click', function(){
-		logoInput.style.display ='block';
 	
 	logoInput.addEventListener('change', function(ev){
 		const file = ev.target.files[0];
@@ -64,10 +57,8 @@ showTitleInput.style.display = 'none'
 
 			reader.readAsDataURL(file);
 			console.log(logoInput.value)
-			logoInput.style.display ='none';
 		}
 	});
-});
 
 
 
@@ -95,15 +86,13 @@ const rightSideNav = document.querySelector('.right-side-nav');
 
 // show side navigation
 rightSideNav.style.display = 'block';
-
-//code for changing the background of the timer
-	const backgroundInput = document.getElementById('upload-btn');
-	const bgOverlay = document.querySelector('.overlay')
-	
 	
 // default gradient backgroundInput
 const defaultBackground = 'linear-gradient(45deg, #ff6b6b, $4ecdc4)'
 
+//code for changing the background of the timer
+const backgroundInput = document.getElementById('backgroundInput');
+const bgOverlay = document.querySelector('.overlay')
 		// listen for file selection
 	backgroundInput.addEventListener('change', (event)=>{
 		const file = event.target.files[0];
@@ -131,8 +120,8 @@ const defaultBackground = 'linear-gradient(45deg, #ff6b6b, $4ecdc4)'
 	});
 
 
-// trying to figure out how to make the timer work in another way
-
+// timer countdown code
+//I get the ids from the html file for manipulation to be used later in the code
 let hour = document.getElementById('hour');
 let minutes = document.getElementById('minute');
 let seconds = document.getElementById('seconds');
@@ -144,22 +133,20 @@ const timerContainer= document.getElementById('timerContainer')
 
 const timeUpShow = document.getElementById('timeupContainer')
 
-
+//store variable to track the timer
 var interval = null;
 var total = 0;
 
-// totalValue = ()=>{
-// 	total = Number(hour.value) * 3600 + 
-// 	Number(minutes.value) * 60 + 
-// 	Number(seconds.value)
-// }
 
+//this function is calculating total seconds
 function calculateTotalSeconds(){
 	return Number(hour.value) * 3600 +
 			Number(minutes.value) * 60 +
 			Number(seconds.value);
 }
 
+
+//this section is updating the timer
 function updateTimer(){
 	
 	if (total >= 0){
@@ -167,7 +154,8 @@ function updateTimer(){
 		let mt = Math.floor((total % 3600) / 60);
 		let sc = total % 60;
 
-		//update the input with padddin
+		//update the input with padding, i.e. adding extra zero instead of a single number 
+		//when the number is less than 10
 		hour.value = hr.toString().padStart(2, '0');
 		minutes.value = mt.toString().padStart(2, '0');
 		seconds.value = sc.toString().padStart(2, '0');
@@ -181,7 +169,7 @@ function updateTimer(){
 	}
 }
 
-
+//start button manipulation, getting it worked
 startBtn.addEventListener('click', ()=>{
 
 	total = calculateTotalSeconds();
@@ -191,7 +179,7 @@ startBtn.addEventListener('click', ()=>{
 });
 
 
-
+//reset button code
 resetBtn.addEventListener('click', ()=>{
 	clearInterval(interval);
 	hour.value = '00';
