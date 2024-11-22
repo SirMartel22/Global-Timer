@@ -12,6 +12,7 @@ showTitleInput.style.display = 'none'
 		showTitleInput.style.display = 'block';
 	});
 
+
 	// add event listener to generate the program title when the button is clicked
 	const generateTitle = document.getElementById('generate');
 		generateTitle.addEventListener('click', ()=>{
@@ -27,8 +28,6 @@ showTitleInput.style.display = 'none'
 		// log the generated program title for debugging purposes
 		console.log(title);
 	})
-
-
 
 
 
@@ -162,15 +161,19 @@ function calculateTotalSeconds(){
 }
 
 function updateTimer(){
-	total --;
+	
 	if (total >= 0){
 		let hr = Math.floor(total / 3600);
 		let mt = Math.floor((total % 3600) / 60);
 		let sc = total % 60;
 
+		//update the input with padddin
 		hour.value = hr.toString().padStart(2, '0');
-		minutes.value = hr.toString().padStart(2, '0');
-		seconds.value = hr.toString().padStart(2, '0');
+		minutes.value = mt.toString().padStart(2, '0');
+		seconds.value = sc.toString().padStart(2, '0');
+		
+		//timer decrement
+		total --;
 	} else {
 		clearInterval(interval);
 		timerContainer.style.display = 'none';
@@ -179,31 +182,10 @@ function updateTimer(){
 }
 
 
-// timer = () =>{
-// 	totalValue();
-// 	total --
-// 	if (total >=0){
-// 		// var hr = Math.floor(total/3600);
-// 		// var mt = Math.floor((total/60) - (hr*60));
-// 		// var sc = Math.floor((hr*3600) + (mt*60));
-
-// 		var hr = Math.floor(total / 3600);
-// 		var mt = Math.floor((total % 60) / 60 );
-// 		var sc = total % 60;
-
-
-// 		hour.value = hr;
-// 		minutes.value = mt;
-// 		seconds.value = sc;
-// 	}
-// 	else{
-// 		timerContainer.style.display = 'none';
-// 		timeUpShow.style.display = 'block';
-// 	}
-// }
-
 startBtn.addEventListener('click', ()=>{
-	console.log('button is working!!')
+
+	total = calculateTotalSeconds();
+	// console.log('button is working!!')
 	clearInterval(interval);
 	interval = setInterval(updateTimer, 1000);
 });
@@ -212,8 +194,10 @@ startBtn.addEventListener('click', ()=>{
 
 resetBtn.addEventListener('click', ()=>{
 	clearInterval(interval);
-	hour.value = 0;
-	minutes.value = 0;
-	seconds.value = 0;
-	console.log("Timer reset")
+	hour.value = '00';
+	minutes.value = '00';
+	seconds.value = '00';
+	console.log("Timer reset");
+	timerContainer.style.display = 'block';
+	timeUpShow.style.display = 'none';
 });
