@@ -56,13 +56,20 @@ body{
 	align-items: center;
 	justify-content: center;
 	list-style: none;
+	margin-top: 30px;
+	flex-wrap: nowrap;
+	gap: 20px;
+	padding: 0;
 }
 
-.right-side-nav .box ul li{
+.right-side-nav .box li{
 	margin: 20px 0;
 }
 
-.right-side-nav .box button, .right-side-nav .box li label{
+.right-side-nav .box button{
+	margin: 0;
+}
+.right-side-nav .box button, .right-side-nav .box label{
 	width: 150px;
 	padding: 19px 13px;
 	background: rgba(255, 255, 255, 0.1);
@@ -72,18 +79,17 @@ body{
 	cursor: pointer;
 	transition: all 0.3s ease;
 	font-size: 18px;
+	font-weight: bold;
 	font-family: 'gill sans mt';
-	margin-right: 30px;
+	margin-right: auto;
 }
 
-/* .right-side-nav .box li label{
-	margin-top: 30px;
-	margin-bottom: 50px;
-} */
+
+
 
 .showTitleInput{
 	margin-top: -10px;
-	margin-bottom: 50px;
+	margin-bottom: 70px;
 }
 
 .showTitleInput input[type="text"]{
@@ -107,14 +113,9 @@ body{
 	border-radius: 10px;
 }
 
+.right-side-nav .box button:hover, 
+.right-side-nav .box li label:hover,
 .showTitleInput button:hover{
-	background-color: #87CEEB;
-	border: none;
-	border-radius: 10px;
-	color: #fff;
-}
-
-.right-side-nav .box button:hover{
 	background: rgba(255, 255, 255, 0.2);
 	transform: scale(1.05);
 }
@@ -129,7 +130,7 @@ body{
 }
 
 .timer-container{
-	background: rgba(0,0,0,0.6);
+	background: rgba(0,0,0,0.7);
 	padding: 50px;
 	border-radius: 10px;
 	margin: 10px;
@@ -139,15 +140,18 @@ body{
 	align-items: center;
 	justify-content: center;
 	justify-items: center;
+	margin-top: 30px;
+	margin-right:120px;
 }
 
 /*timeup container style*/
 .timeup-container{
-	background: rgba(255,0,0,0.5);
-	padding: 20px;
+	margin-top: 40px;
+	background: rgba(203, 24, 24, 0.5);
+	padding: 50px;
 	border-radius: 10px;
 	margin: 20px;
-	max-width: 400px;
+	width: 500px;
 	display: none;
 }
 
