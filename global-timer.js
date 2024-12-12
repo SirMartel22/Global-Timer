@@ -30,9 +30,7 @@ showTitleInput.style.display = 'none'
 	})
 
 
-
     // event listener for uploading a logo image
-	
 	//get the value of logo input and get it to show when a logo is selected
 	const previewLogo = document.getElementById('preview-logo');
 	const logoInput = document.getElementById('logoInput')
