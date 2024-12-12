@@ -59,9 +59,6 @@ showTitleInput.style.display = 'none'
 	});
 
 
-
-
-
 //Function to reset background to default gradient
 function resetBackground(){
 	console.log("working")
@@ -72,9 +69,6 @@ function resetBackground(){
 	fileNameDisplay.textContent = '';
 	console.log(backgroundInput.value)
 }
-
-
-
 
 //Side navigation code
 //get side navigation button
@@ -143,7 +137,6 @@ function calculateTotalSeconds(){
 			Number(seconds.value);
 }
 
-
 //this section is updating the timer
 function updateTimer(){
 	
@@ -152,7 +145,8 @@ function updateTimer(){
 		let mt = Math.floor((total % 3600) / 60);
 		let sc = total % 60;
 
-		//update the input with padding, i.e. adding extra zero instead of a single number 
+		//update the input with padding, 
+		//i.e. adding extra zero instead of a single number 
 		//when the number is less than 10
 		hour.value = hr.toString().padStart(2, '0');
 		minutes.value = mt.toString().padStart(2, '0');
@@ -165,6 +159,21 @@ function updateTimer(){
 		timerContainer.style.display = 'none';
 		timeUpShow.style.display = 'block';
 	}
+}
+
+const percentage = document.getElementById('percentageDisplay');
+
+function calculatePercentage(remaining, total){
+	//prevent division by zero handling edge cases
+	if(total <= 0) return 0;
+	//convert remaining time to minutes and seconds
+
+	//calculate the percentage of remaining time from total time
+	const percentage = (remaining/total)*100
+
+	//ensure percentage is between 0 and 100
+	return Math.max(0, Math.min(100, percentage.toFixed(2)));
+
 }
 
 //start button manipulation, getting it worked

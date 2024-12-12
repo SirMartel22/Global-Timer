@@ -83,10 +83,6 @@ body{
 	font-family: 'gill sans mt';
 	margin-right: auto;
 }
-
-
-
-
 .showTitleInput{
 	margin-top: -10px;
 	margin-bottom: 70px;
@@ -147,12 +143,22 @@ body{
 /*timeup container style*/
 .timeup-container{
 	margin-top: 40px;
-	background: rgba(203, 24, 24, 0.5);
+	background: rgba(221, 50, 7, 0.884);
 	padding: 50px;
 	border-radius: 10px;
 	margin: 20px;
 	width: 500px;
 	display: none;
+	width: 700px;
+	height: 400px;
+	padding-top: 8%;
+}
+
+.timeup-container h1{
+	font-size: 8em;
+    font-weight: bold;
+    color: #fff;
+	font-family:Upper Clock Solid;
 }
 
 .timer-container .time{
