@@ -1,17 +1,20 @@
 // entering and showing the program title 
 
 // get the value of the button to show the program title input
-const titleBtn = document.getElementById('generateTitle')
+const titleBtn = document.querySelector("#titleName");
+titleBtn.addEventListener('click', function(){
+	console.log('button is clicked')
+})
 
 // get the input field for program title and hide it by default
 const showTitleInput = document.querySelector('#showTitleInput');
 showTitleInput.style.display = 'none'
 
-// add event listener to show the program title input when the button is clicked
+// // add event listener to show the program title input when the button is clicked
 	titleBtn.addEventListener('click', ()=>{
+		console.log(titleBtn)
 		showTitleInput.style.display = 'block';
 	});
-
 
 	// add event listener to generate the program title when the button is clicked
 	const generateTitle = document.getElementById('generate');
@@ -27,8 +30,7 @@ showTitleInput.style.display = 'none'
 		
 		// log the generated program title for debugging purposes
 		console.log(title);
-	})
-
+	});
 
     // event listener for uploading a logo image
 	//get the value of logo input and get it to show when a logo is selected
@@ -57,7 +59,6 @@ showTitleInput.style.display = 'none'
 			console.log(logoInput.value)
 		}
 	});
-
 
 //Function to reset background to default gradient
 function resetBackground(){
@@ -146,7 +147,6 @@ function updateTimer(){
 		let mt = Math.floor((total % 3600) / 60);
 		let sc = total % 60;
 		
-
 		//update the input with padding, 
 		//i.e. adding extra zero instead of a single number 
 		//when the number is less than 10
@@ -176,17 +176,21 @@ function calculatePercentage(current, total){
 	//convert remaining time to minutes and seconds
 
 	//calculate the percentage of remaining time from total time
-	const percentage = ((total - current / total))*100;
+	const percentageElapsed = ((total - current) / total)*100;
+
+	let newCurrentTime = 100 - percentageElapsed;
 
 	//ensure percentage is between 0 and 100
-	return Math.max(0, Math.min(100, percentage.toFixed(2)));
-
+	return Math.max(0, Math.min(100, newCurrentTime.toFixed(2)));
+	
+	remainingTime = newCurrentTime
+	console.log(remainingTime);
 }
 
+console.log(remainingTime)
 function updateDisplay() {
-
 	//update remaining time with current total
-	const percentage = calculatePercentage(total - remainingTime, total);
+	const percentage = calculatePercentage(remainingTime, total);
 
 	console.log(percentage+'%');
 
@@ -201,6 +205,7 @@ startBtn.addEventListener('click', ()=>{
 	total = calculateTotalSeconds();
 	// console.log('button is working!!')
 	clearInterval(interval);
+	updateTimer();
 	interval = setInterval(updateTimer, 1000);
 });
 

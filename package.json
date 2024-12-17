@@ -1,5 +1,17 @@
 {
   "dependencies": {
     "git": "^0.1.5"
+  },
+  "name": "global-timer",
+  "version": "1.0.0",
+  "description": "Personalized timer",
+  "main": "global-timer.js",
+  "scripts": {
+    "nodemon": "nodemon global-timer.js"
+  },
+  "author": "DevTimmy",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
