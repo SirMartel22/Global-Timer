@@ -128,6 +128,7 @@ const timeUpShow = document.getElementById('timeupContainer')
 //store variable to track the timer
 var interval = null;
 var total = 0;
+let remainingTime = 0;
 
 
 //this function is calculating total seconds
@@ -144,6 +145,7 @@ function updateTimer(){
 		let hr = Math.floor(total / 3600);
 		let mt = Math.floor((total % 3600) / 60);
 		let sc = total % 60;
+		
 
 		//update the input with padding, 
 		//i.e. adding extra zero instead of a single number 
@@ -152,8 +154,13 @@ function updateTimer(){
 		minutes.value = mt.toString().padStart(2, '0');
 		seconds.value = sc.toString().padStart(2, '0');
 		
+		//Call updateDisaplay here to update percentage
+		updateDisplay();
 		//timer decrement
-		total --;
+		total--;
+		// console.log(total);
+		
+		
 	} else {
 		clearInterval(interval);
 		timerContainer.style.display = 'none';
@@ -161,20 +168,32 @@ function updateTimer(){
 	}
 }
 
-const percentage = document.getElementById('percentageDisplay');
+const percentageShow = document.getElementById('percentageDisplay');
 
-function calculatePercentage(remaining, total){
+function calculatePercentage(current, total){
 	//prevent division by zero handling edge cases
 	if(total <= 0) return 0;
 	//convert remaining time to minutes and seconds
 
 	//calculate the percentage of remaining time from total time
-	const percentage = (remaining/total)*100
+	const percentage = ((total - current / total))*100;
 
 	//ensure percentage is between 0 and 100
 	return Math.max(0, Math.min(100, percentage.toFixed(2)));
 
 }
+
+function updateDisplay() {
+
+	//update remaining time with current total
+	const percentage = calculatePercentage(total - remainingTime, total);
+
+	console.log(percentage+'%');
+
+	percentageShow.innerHTML = `<h1>${percentage}%</h1>`;
+}
+
+
 
 //start button manipulation, getting it worked
 startBtn.addEventListener('click', ()=>{
