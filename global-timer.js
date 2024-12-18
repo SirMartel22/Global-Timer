@@ -37,9 +37,7 @@ showTitleInput.style.display = 'none'
 	const previewLogo = document.getElementById('preview-logo');
 	const logoInput = document.getElementById('logoInput')
 
-
 	const uploadLogo = document.getElementById('uploadLogo')
-	
 	
 	logoInput.addEventListener('change', function(ev){
 		const file = ev.target.files[0];
@@ -59,17 +57,6 @@ showTitleInput.style.display = 'none'
 			console.log(logoInput.value)
 		}
 	});
-
-//Function to reset background to default gradient
-function resetBackground(){
-	console.log("working")
-	document.body.style.background = defaultBackground;
-
-	// // clear the file input and filename display
-	backgroundInput.value = '';
-	fileNameDisplay.textContent = '';
-	console.log(backgroundInput.value)
-}
 
 //Side navigation code
 //get side navigation button
@@ -102,7 +89,7 @@ const bgOverlay = document.querySelector('.overlay')
 				document.body.style.backgroundPosition = 'center';
 				document.body.style.backgroundRepeat = 'no-repeat';
 				document.body.style.zIndex = '1';
-				bgOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+				bgOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
 			};
 
 			// read the image file
@@ -195,10 +182,8 @@ function updateDisplay() {
 
 	console.log(percentage+'%');
 
-	percentageShow.innerHTML = `<h3><span style='font-weight: bold; font-size: 50px'>${percentage}%</span> <br>of Time Remaining</br></h4>`;
+	percentageShow.innerHTML = `<h3 style='color:#fcfb7a'><span style='font-weight: bold; font-size: 50px'>${percentage}%</span> <br> of Time Remaining</br></h4>`;
 }
-
-
 
 //start button manipulation, getting it worked
 startBtn.addEventListener('click', ()=>{
@@ -209,6 +194,7 @@ startBtn.addEventListener('click', ()=>{
 	clearInterval(interval);
 	updateTimer();
 	interval = setInterval(updateTimer, 1000);
+	startBtn.disabled = true;
 });
 
 
@@ -221,4 +207,5 @@ resetBtn.addEventListener('click', ()=>{
 	console.log("Timer reset");
 	timerContainer.style.display = 'block';
 	timeUpShow.style.display = 'none';
+	percentageShow.style.display = 'none';
 });

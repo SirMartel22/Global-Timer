@@ -7,7 +7,7 @@
 body{
 	min-height: 100vh;
 	/*	default gradient background*/
-	background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+	background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 90.6%);
 	/*	Add background properties for uploaded images*/
 	background-position: center;
 	background-size: cover;
@@ -26,7 +26,7 @@ body{
 
 .percentage-show{
 	display: block;
-	margin-top: -150px;
+	margin-top: -100px;
 	margin-bottom: 100px;
 	margin-right: 0;
 	padding: 10px;
@@ -41,7 +41,7 @@ body{
 }
 
 .header{
-	font-size: 35px;
+	font-size: 45px;
 	font-weight: bold;
 	margin-top: -3%;
 }
@@ -66,18 +66,20 @@ body{
 	list-style: none;
 	margin-top: 30px;
 	flex-wrap: nowrap;
-	gap: 20px;
+	gap: 5px;
 	padding: 0;
+	margin-right: 5%;
 }
 
 .right-side-nav .box li{
 	margin: 20px 0;
 }
 
-.right-side-nav .box button{
-	margin: 0;
-}
+/* .right-side-nav .box button{ */
+	/* margin: 0; */
+/* } */
 .right-side-nav .box button, .right-side-nav .box label{
+	display: block;
 	width: 150px;
 	padding: 19px 13px;
 	background: rgba(255, 255, 255, 0.1);
@@ -89,8 +91,16 @@ body{
 	font-size: 18px;
 	font-weight: bold;
 	font-family: 'gill sans mt';
-	margin-right: auto;
 }
+
+.right-side-nav .box button:hover, 
+.right-side-nav .box li label:hover,
+.showTitleInput button:hover{
+	background-color: #355d6c;
+	color: aquamarine;
+	transition: all 0.3s ease;
+}
+
 .showTitleInput{
 	margin-top: -3%;
 }
@@ -114,13 +124,6 @@ body{
 	background: none;
 }
 
-.right-side-nav .box button:hover, 
-.right-side-nav .box li label:hover,
-.showTitleInput button:hover{
-	background: rgba(255, 255, 255, 0.2);
-	transform: scale(1.05);
-}
-
 /*Container for the upload section*/
 .upload-container{
 	background: rgba(0,0,0,0.5);
@@ -132,8 +135,8 @@ body{
 
 .timer-container{
 	background: rgba(0,0,0,0.7);
-	padding: 50px;
-	border-radius: 10px;
+	padding: 5%;
+	border-radius: 15px;
 	margin: 10px;
 	max-width: 80%;
 	display: flex;
@@ -141,7 +144,6 @@ body{
 	align-items: center;
 	justify-content: center;
 	justify-items: center;
-	margin-top: 30px;
 	margin-right:120px;
 }
 
@@ -152,7 +154,6 @@ body{
 	padding: 50px;
 	border-radius: 10px;
 	margin: 20px;
-	width: 500px;
 	display: none;
 	width: 700px;
 	height: 400px;
@@ -213,17 +214,22 @@ body{
 	}
 }
 
-.start-btn, .timereset-btn, .stop-btn{
-	padding: 5px 10px;
-	font-size: 18px;
-	background: rgba(255, 255, 255, 0.2);
-	border: 1px solid #fff;
-	color: #fff;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	display: inline-block;
-	margin: 10px;
+.start-btn, .timereset-btn{
+	margin-top: 3%;
+	width: 150px;
+	height: 50px;
+	border: 1px solid #87CEEB;
+	color: #87CEEB;
+	border-radius: 10px;
+	background: none;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+
+.start-btn:hover, .timereset-btn:hover{
+	background-color: #355d6c;
+	color: aquamarine;
 }
 
 .logo-container{
@@ -259,26 +265,6 @@ body{
 /*styles for the input*/
 .file-input{
 	display: none;
-}
-
-/*style for the custom upload button*/
-.upload-btn, .reset-btn{
-	padding: 15px 30px;
-	font-size: 18px;
-	background: rgba(255, 255, 255, 0.2);
-	border: 2px solid #fff;
-	color: #fff;
-	border-radius: 25px;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	display: inline-block;
-	margin: 10px;
-}
-
-/*button hover effect*/
-.upload-btn:hover{
-	background: rgba(255, 255, 255, 0.2);
-	transform: scale(1.06);
 }
 
 .reset-btn:hover{
