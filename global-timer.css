@@ -24,6 +24,13 @@ body{
 	text-align: center;
 }
 
+.percentage-show{
+	margin-top: 0;
+	margin-right: 0;
+	padding: 10px;
+}
+
+
 .overlay{
 	width: 100vw;
 	height: 100vh;
@@ -37,6 +44,8 @@ body{
 	font-weight: bold;
 	margin-top: -100px;
 }
+
+
 
 /* side navigation styles */
 .right-side-nav{
