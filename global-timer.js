@@ -195,7 +195,7 @@ function updateDisplay() {
 
 	console.log(percentage+'%');
 
-	percentageShow.innerHTML = `<h1>${percentage}% of Time Remaining </h1>`;
+	percentageShow.innerHTML = `<h3><span style='font-weight: bold; font-size: 50px'>${percentage}%</span> <br>of Time Remaining</br></h4>`;
 }
 
 
