@@ -19,7 +19,7 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-family: 'gill sans mt';
+	font-family: 'gill sans mt', 'Poppins', 'Montserrat';
 	color: #fff;
 	text-align: center;
 }

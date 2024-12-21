@@ -8,7 +8,7 @@ titleBtn.addEventListener('click', function(){
 
 // get the input field for program title and hide it by default
 const showTitleInput = document.querySelector('#showTitleInput');
-showTitleInput.style.display = 'none'
+showTitleInput.style.display = 'none';
 
 // // add event listener to show the program title input when the button is clicked
 	titleBtn.addEventListener('click', ()=>{
@@ -23,7 +23,7 @@ showTitleInput.style.display = 'none'
 		const timerTitle = document.getElementById('timerTitle')
 
 		// display the generated program title in the timer title element
-		timerTitle.innerHTML =`<h3> ${title} </h3>`
+		timerTitle.innerHTML =`<h3 style=" font-weight: bold;  font-size: 50px"> ${title} </h3>`
 
 		// hide the program title input after generating the title
 		showTitleInput.style.display = 'none'
@@ -196,7 +196,6 @@ startBtn.addEventListener('click', ()=>{
 	interval = setInterval(updateTimer, 1000);
 	startBtn.disabled = true;
 });
-
 
 //reset button code
 resetBtn.addEventListener('click', ()=>{
