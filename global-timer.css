@@ -6,19 +6,19 @@
 
 body{
 	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	/*	default gradient background*/
 	background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 90.6%);
 	/*	Add background properties for uploaded images*/
 	background-position: center;
 	background-size: cover;
-	background-repeat: no-repeat;
 	/* Smooth transition for background changes */
 	transition: background 0.5s ease;
-	/*	Center content*/
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	font-family: 'gill sans mt', 'Poppins', 'Montserrat';
 	color: #fff;
 	text-align: center;
@@ -27,30 +27,36 @@ body{
 .percentage-show{
 	display: block;
 	margin-top: -100px;
-	margin-bottom: 100px;
+	margin-bottom: 70px;
 	margin-right: 0;
 	padding: 10px;
 }
 
 .overlay{
 	width: 100%;
-	height: 100%;
-	display: block;
+	min-height: 100vh;
 	justify-items: center;
-	padding: 1%;
+	padding-top: 5%;
+	padding-bottom: 1%;
+	background: none;
+	position: absolute; 
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 }
 
 .header{
 	font-size: 45px;
 	font-weight: bold;
-	margin-top: -3%;
+	text-align: center;
 }
 
 /* side navigation styles */
 .right-side-nav{
 	position: fixed;
 	right: 0;
-	top: 50%;
+	top: 49%;
 	transform: translateY(-50%);
 	background: 20px;
 	border-top-left-radius: 10px;
@@ -69,6 +75,7 @@ body{
 	gap: 5px;
 	padding: 0;
 	margin-right: 5%;
+	margin-top: auto;
 }
 
 .right-side-nav .box li{
@@ -82,7 +89,7 @@ body{
 	display: block;
 	width: 150px;
 	padding: 19px 13px;
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(110, 127, 132, 0.8);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	color: #87CEEB;
 	border-radius: 5px;
@@ -102,7 +109,7 @@ body{
 }
 
 .showTitleInput{
-	margin-top: -3%;
+	margin-top: -2%;
 }
 
 .showTitleInput input[type="text"]{
@@ -135,9 +142,10 @@ body{
 
 .timer-container{
 	background: rgba(0,0,0,0.7);
-	padding: 5%;
+	padding: 2%;
 	border-radius: 15px;
-	margin: 10px;
+	margin: 40px;
+	margin-top: -3px;
 	max-width: 80%;
 	display: flex;
 	flex-wrap: wrap;
@@ -149,22 +157,21 @@ body{
 
 /*timeup container style*/
 .timeup-container{
-	margin-top: 40px;
-	background: rgba(221, 50, 7, 0.884);
-	padding: 50px;
-	border-radius: 10px;
-	margin: 20px;
+	background: rgba(235, 10, 10, 0.77);
+	padding: 5%;
+	border-radius: 15px;
+	margin: 10px;
+	width: 50%;
+	height: 55vh;
 	display: none;
-	width: 700px;
-	height: 400px;
-	padding-top: 8%;
+	margin-right:120px;
 }
 
 .timeup-container h1{
 	font-size: 8em;
     font-weight: bold;
     color: #fff;
-	font-family:Upper Clock Solid;
+	font-family:Upper Clock Solid, 'gill sans mt', 'Poppins', 'Montserrat';
 }
 
 .timer-container .time{
@@ -172,15 +179,15 @@ body{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 10px;
-	font-size: 150px;
+	padding: 5px;
+	font-size: 200px;
 	font-family: Upper Clock Solid;
 	color: #87CEEB;
 }
 
 .timer-container .timerP{
 	display: flex;
-	font-size: 50px;
+	font-size: 40px;
 	align-items: center;
 	justify-content: space-between;
 	margin-right: 30px;
@@ -194,10 +201,13 @@ body{
 
 .timer-container .timerCounter input[type="number"]{
 	text-align: center;
+	font-size: 230px;
 	background: none;
-	border: 1px solid #87CEEB;
+	border: 1px solid #87ebda;
 	border-radius: 10px;
 	width: 30%;
+	padding: 0;
+	margin-right: 10px;
 }
 
  /* timer font size for large displays */
@@ -233,11 +243,11 @@ body{
 }
 
 .logo-container{
-	margin-right: auto;
-	margin-left: 40px;
-	/* margin-top: 10px; */
+	margin-left: 10px;
+	margin-top: -15px;
 	width: 100px;
 	height: 100px;
+	position: fixed;
 }
 
 .logo-container img{
@@ -254,12 +264,6 @@ body{
 	border-radius: 10px;
 	background: none;
 	border-radius: 10px;
-}
-
-/*title styles*/
-.title{
-	margin-bottom: 20px;
-	font-size: 20px;
 }
 
 /*styles for the input*/

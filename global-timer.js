@@ -1,8 +1,8 @@
 // entering and showing the program title 
 
 // get the value of the button to show the program title input
-const titleBtn = document.querySelector("#titleName");
-titleBtn.addEventListener('click', function(){
+const addtitleBtn = document.querySelector("#titleName");
+addtitleBtn.addEventListener('click', function(){
 	console.log('button is clicked')
 })
 
@@ -11,8 +11,8 @@ const showTitleInput = document.querySelector('#showTitleInput');
 showTitleInput.style.display = 'none';
 
 // // add event listener to show the program title input when the button is clicked
-	titleBtn.addEventListener('click', ()=>{
-		console.log(titleBtn)
+	addtitleBtn.addEventListener('click', ()=>{
+		console.log(addtitleBtn)
 		showTitleInput.style.display = 'block';
 	});
 
@@ -23,7 +23,10 @@ showTitleInput.style.display = 'none';
 		const timerTitle = document.getElementById('timerTitle')
 
 		// display the generated program title in the timer title element
-		timerTitle.innerHTML =`<h3 style=" font-weight: bold;  font-size: 50px"> ${title} </h3>`
+		timerTitle.innerHTML =`<h3 style=" font-weight: bold;  
+								font-size: 1.5em; text-align: center;
+								margin-top: -7%"> 
+								${title} </h3>`
 
 		// hide the program title input after generating the title
 		showTitleInput.style.display = 'none'
@@ -89,13 +92,13 @@ const bgOverlay = document.querySelector('.overlay')
 				document.body.style.backgroundPosition = 'center';
 				document.body.style.backgroundRepeat = 'no-repeat';
 				document.body.style.zIndex = '1';
-				bgOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+				bgOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+				// bgOverlay.style.backgroundSize = '100vh'
 			};
 
 			// read the image file
 			reader.readAsDataURL(file);
 			console.log(backgroundInput.value); 
-			// uploadContainer.style.display ='none';
 		}
 	});
 
