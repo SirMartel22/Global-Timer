@@ -25,7 +25,7 @@ showTitleInput.style.display = 'none';
 		// display the generated program title in the timer title element
 		timerTitle.innerHTML =`<h3 style=" font-weight: bold;  
 								font-size: 1.5em; text-align: center;
-								margin-top: -7%"> 
+								margin-top: -7%; margin-bottom: 15px;"> 
 								${title} </h3>`
 
 		// hide the program title input after generating the title
@@ -188,9 +188,11 @@ function updateDisplay() {
 	percentageShow.innerHTML = `<h3 style='color:#fcfb7a'><span style='font-weight: bold; font-size: 50px'>${percentage}%</span> <br> of Time Remaining</br></h4>`;
 }
 
+const sideNav = document.getElementById('closeNav');
+
 //start button manipulation, getting it worked
 startBtn.addEventListener('click', ()=>{
-
+	sideNav.style.display = 'none';
 	initialTotalTime = calculateTotalSeconds();
 	totalTime = initialTotalTime;
 	// console.log('button is working!!')

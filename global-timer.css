@@ -6,8 +6,6 @@
 
 body{
 	min-height: 100vh;
-	margin: 0;
-	padding: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -20,17 +18,20 @@ body{
 	/* Smooth transition for background changes */
 	transition: background 0.5s ease;
 	font-family: 'gill sans mt', 'Poppins', 'Montserrat';
-	color: #fff;
+	color: #8fcee7;
 	text-align: center;
 }
 
 .percentage-show{
 	display: block;
-	margin-top: -100px;
+	margin-top: -30px;
 	margin-bottom: 70px;
 	margin-right: 0;
 	padding: 10px;
 }
+
+/* font-family: '7LED italic', sans-serif;
+font-family: '7LED', sans-serif; */
 
 .overlay{
 	width: 100%;
@@ -108,8 +109,13 @@ body{
 	transition: all 0.3s ease;
 }
 
+/* display none the mobile buttons  */
+.mobile-box{
+	display: none;
+}
+
 .showTitleInput{
-	margin-top: -2%;
+	margin-top: -4%;
 }
 
 .showTitleInput input[type="text"]{
@@ -141,7 +147,7 @@ body{
 }
 
 .timer-container{
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,0.9);
 	padding: 2%;
 	border-radius: 15px;
 	margin: 40px;
@@ -168,10 +174,10 @@ body{
 }
 
 .timeup-container h1{
-	font-size: 8em;
+	font-size: 10em;
     font-weight: bold;
     color: #fff;
-	font-family:Upper Clock Solid, 'gill sans mt', 'Poppins', 'Montserrat';
+	font-family:'Digital-7', 'gill sans mt', 'Poppins', 'Montserrat';
 }
 
 .timer-container .time{
@@ -181,7 +187,7 @@ body{
 	justify-content: center;
 	padding: 5px;
 	font-size: 200px;
-	font-family: Upper Clock Solid;
+	font-weigth: bold;
 	color: #87CEEB;
 }
 
@@ -191,6 +197,7 @@ body{
 	align-items: center;
 	justify-content: space-between;
 	margin-right: 30px;
+	/* font-family: '7LED italic'; */
 }
 
 .timer-container .timerCounter{
@@ -201,13 +208,14 @@ body{
 
 .timer-container .timerCounter input[type="number"]{
 	text-align: center;
-	font-size: 230px;
+	font-size: 310px;
 	background: none;
 	border: 1px solid #87ebda;
 	border-radius: 10px;
 	width: 30%;
 	padding: 0;
 	margin-right: 10px;
+	font-family: 'Digital-7';
 }
 
  /* timer font size for large displays */
@@ -236,7 +244,6 @@ body{
 	font-size: 19px;
 }
 
-
 .start-btn:hover, .timereset-btn:hover{
 	background-color: #355d6c;
 	color: aquamarine;
@@ -244,7 +251,7 @@ body{
 
 .logo-container{
 	margin-left: 10px;
-	margin-top: -15px;
+	margin-top: -45px;
 	width: 100px;
 	height: 100px;
 	position: fixed;
@@ -282,3 +289,4 @@ body{
 	font-size: 14px;
 	word-break: break-all;
 }
+

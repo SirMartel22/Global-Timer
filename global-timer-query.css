@@ -1,0 +1,164 @@
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    body{
+	    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 90.6%);
+        transition: background 0.5s ease;
+        font-family: 'gill sans mt', 'Poppins', 'Montserrat';
+        font-weight: bold;
+        color: #fff;
+    }
+   .overlay{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;  
+   }
+
+   .header{
+        font-size: 45px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .timer-container{
+        background: rgba(0,0,0,0.9);
+        padding: 2%;
+        border-radius: 15px;
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        margin-right: 0;
+    }
+
+    .timer-container .timerP{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0;
+    }
+
+    .timer-container .timerCounter{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .timerCounter .semicolon{
+        display: none;
+    }
+    .timer-container .timerCounter input[type="number"]{
+        font-size: 100px;
+        width: 70%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .percentage-show{
+        display: block;
+        margin-top: -30px;
+        margin-bottom: 70px;
+        margin-right: 0;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .mobile-box{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-side-nav{
+        display: none;
+    }
+
+    .mobile-box button{
+        display: block;
+        width: 150px;
+        padding: 19px 13px;
+        background: rgba(110, 127, 132, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #87CEEB;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'gill sans mt';
+    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    .overlay{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;  
+   }
+
+   .header{
+        font-size: 45px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+
+    .timer-container .timerP{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0;
+    }
+
+    .timer-container .timerCounter{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .timer-container .timerCounter input[type="number"]{
+        font-size: 100px;
+        width: 40%;
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: blue;
+    }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    body {
+        
+    }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+    body {
+        
+    }
+}

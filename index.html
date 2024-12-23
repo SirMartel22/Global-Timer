@@ -7,8 +7,18 @@
 
 	<title> Global timer </title>
 	<link rel="stylesheet" type="text/css" href="global-timer.css">
+	<link rel="stylesheet" type="text/css" href="global-timer-query.css">
 
-	<!-- link to google font -->
+	
+	<!-- add custome time like font -->
+	<link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+	
+	<!-- link to custom font -->
+   <!-- <link href="https://fontlot.com/602159/upper-clock-font/" rel="stylesheet">       -->
+   
+   <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">	
+	
+    <!-- link to google font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 
 </head>
@@ -64,7 +74,7 @@
 		</div>
 
 		<!-- the side navigation buttons -->
-		<div class="box">
+		<div class="box" id="closeNav">
 			<ul>
 			  <li><button id="titleName"> Add Title </button></li>
 			  <!-- <li><button id="uploadLogo">Import Logo</button></li> -->
@@ -109,6 +119,18 @@
 		<h1>Time's Up</h1>	
 	</div>
 
+	</div>
+
+	<!-- mobile button display -->
+
+	<div class="mobile-box">
+		<ul>
+		  <li><button id="titleName"> Add Title </button></li>
+		  <!-- <li><button id="uploadLogo">Import Logo</button></li> -->
+		  <li><label for="backgroundInput" id="upload-btn">Add Background</label></li>
+		  <!--  -->
+		  <li><label for="logoInput" id="uploadLogoBtn">Add Logo</label></li>
+		</ul>
 	</div>
 <script type="text/javascript" src="global-timer.js"></script>
 </body>
