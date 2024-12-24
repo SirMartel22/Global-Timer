@@ -17,8 +17,8 @@ body{
 	background-size: cover;
 	/* Smooth transition for background changes */
 	transition: background 0.5s ease;
-	font-family: 'gill sans mt', 'Poppins', 'Montserrat';
-	color: #8fcee7;
+	font-family: 'Montserrat';
+	color: #aad9ec;
 	text-align: center;
 }
 
@@ -98,7 +98,15 @@ font-family: '7LED', sans-serif; */
 	transition: all 0.3s ease;
 	font-size: 18px;
 	font-weight: bold;
-	font-family: 'gill sans mt';
+	font-family: 'montserrat';
+}
+
+#closeNav{
+    right: 20px;
+    margin-top: -50%;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.3s ease;
 }
 
 .right-side-nav .box button:hover, 
@@ -177,7 +185,7 @@ font-family: '7LED', sans-serif; */
 	font-size: 10em;
     font-weight: bold;
     color: #fff;
-	font-family:'Digital-7', 'gill sans mt', 'Poppins', 'Montserrat';
+	font-family:'Digital-7';
 }
 
 .timer-container .time{
@@ -187,7 +195,7 @@ font-family: '7LED', sans-serif; */
 	justify-content: center;
 	padding: 5px;
 	font-size: 200px;
-	font-weigth: bold;
+	font-weight: bold;
 	color: #87CEEB;
 }
 
@@ -208,7 +216,7 @@ font-family: '7LED', sans-serif; */
 
 .timer-container .timerCounter input[type="number"]{
 	text-align: center;
-	font-size: 310px;
+	font-size: 290px;
 	background: none;
 	border: 1px solid #87ebda;
 	border-radius: 10px;

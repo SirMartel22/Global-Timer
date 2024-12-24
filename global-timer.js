@@ -109,6 +109,9 @@ let hour = document.getElementById('hour');
 let minutes = document.getElementById('minute');
 let seconds = document.getElementById('seconds');
 
+
+
+
 let startBtn = document.getElementById('startBtn');
 let resetBtn = document.getElementById('resetBtn');
 
@@ -195,21 +198,30 @@ startBtn.addEventListener('click', ()=>{
 	sideNav.style.display = 'none';
 	initialTotalTime = calculateTotalSeconds();
 	totalTime = initialTotalTime;
-	// console.log('button is working!!')
 	clearInterval(interval);
 	updateTimer();
 	interval = setInterval(updateTimer, 1000);
 	startBtn.disabled = true;
+	percentageShow.style.display = 'block';
 });
 
 //reset button code
 resetBtn.addEventListener('click', ()=>{
 	clearInterval(interval);
-	hour.value = '00';
-	minutes.value = '00';
-	seconds.value = '00';
+	hour.value = '';
+	minutes.value = '';
+	seconds.value = '';
 	console.log("Timer reset");
 	timerContainer.style.display = 'block';
 	timeUpShow.style.display = 'none';
 	percentageShow.style.display = 'none';
+	startBtn.disabled = false;
+	sideNav.style.display = 'block';
 });
+
+const timeUpBtnReset = document.getElementById('timeUpResetBtn');
+console.log(timeUpBtnReset)
+
+timeUpBtnReset.addEventListener('click', ()=>{
+	resetBtn.click();
+})
