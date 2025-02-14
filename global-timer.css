@@ -20,6 +20,7 @@ body{
 	font-family: 'Montserrat';
 	color: #aad9ec;
 	text-align: center;
+	width: 100%;
 }
 
 .percentage-show{
@@ -30,8 +31,6 @@ body{
 	padding: 10px;
 }
 
-/* font-family: '7LED italic', sans-serif;
-font-family: '7LED', sans-serif; */
 
 .overlay{
 	width: 100%;
@@ -160,12 +159,11 @@ font-family: '7LED', sans-serif; */
 	border-radius: 15px;
 	margin: 40px;
 	margin-top: -3px;
-	max-width: 80%;
+	width: 80%;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	justify-items: center;
 	margin-right:120px;
 }
 
@@ -205,22 +203,23 @@ font-family: '7LED', sans-serif; */
 	align-items: center;
 	justify-content: space-between;
 	margin-right: 30px;
-	/* font-family: '7LED italic'; */
 }
 
 .timer-container .timerCounter{
 	display: flex;
-	justify-content: center;
+	flex-wrap: wrap;
 	align-items: center;
+	justify-content: center;
+	width: 99%;
 }
 
 .timer-container .timerCounter input[type="number"]{
 	text-align: center;
-	font-size: 290px;
+	font-size: 97%;
 	background: none;
 	border: 1px solid #87ebda;
 	border-radius: 10px;
-	width: 30%;
+	width: 25%;
 	padding: 0;
 	margin-right: 10px;
 	font-family: 'Digital-7';
