@@ -160,11 +160,11 @@ body{
 	margin: 40px;
 	margin-top: -3px;
 	width: 80%;
+	margin-right:120px;
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-right:120px;
 }
 
 /*timeup container style*/
@@ -195,6 +195,7 @@ body{
 	font-size: 200px;
 	font-weight: bold;
 	color: #87CEEB;
+	width: 95%;
 }
 
 .timer-container .timerP{
