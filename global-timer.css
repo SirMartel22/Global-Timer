@@ -35,8 +35,6 @@ body{
 .overlay{
 	width: 100%;
 	min-height: 100vh;
-	justify-items: center;
-	padding-top: 5%;
 	padding-bottom: 1%;
 	background: none;
 	position: absolute; 
@@ -44,6 +42,10 @@ body{
 	right: 0;
 	left: 0;
 	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .header{
@@ -157,7 +159,7 @@ body{
 	background: rgba(0,0,0,0.9);
 	padding: 2%;
 	border-radius: 15px;
-	margin: 40px;
+	/* margin: 40px; */
 	margin-top: -3px;
 	width: 80%;
 	margin-right:120px;
@@ -206,6 +208,14 @@ body{
 	margin-right: 30px;
 }
 
+.timer-container .timerCounter{
+	display: grid;
+	grid-row: repeat(1, 200px);
+	grid-column: repeat(3, 3fr);
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+}
 /* .timer-container .timerCounter{
 	display: flex;
 	flex-wrap: wrap;
@@ -213,6 +223,11 @@ body{
 	justify-content: center;
 	width: 99%;
 } */
+
+.timerCounter .box{
+	width: 100%;
+
+}
 
 .timer-container .timerCounter input[type="number"]{
 	text-align: center;
