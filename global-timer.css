@@ -206,13 +206,13 @@ body{
 	margin-right: 30px;
 }
 
-.timer-container .timerCounter{
+/* .timer-container .timerCounter{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	width: 99%;
-}
+} */
 
 .timer-container .timerCounter input[type="number"]{
 	text-align: center;

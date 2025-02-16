@@ -13,6 +13,11 @@
         align-items: center;
         justify-content: center;
         justify-items: center;  
+        padding: 20% 0;
+   }
+
+   .semicolon{
+        font-size: 20px;
    }
 
    .header{

@@ -92,17 +92,31 @@
 		
 		<div class="time">
 			
-			<div class="timerP" style="padding-left: 10%;">
-				<p id="hour_label" class="label">Hours</p> 
+			<!-- <div class="timerP" style="padding-left: 10%;">
+				<p id="hour_label" class="label">Hour</p> 
 				<p style= "margin-left: 200px;" id="min-label" class="label">Minutes</p> 
 				<p style="margin-right: 100px; margin-left: 150px;" id="sec-label" class="label">Seconds</p> 
-			</div>
+			</div> -->
+
+			<!-- <p id="p1" class="semicolon">:</p> -->
+			<!-- <p id="p2" class="semicolon">:</p> -->
 
 			<div class="timerCounter">
+				<div class="hour">
+					<h1 class="hour_label"> Hour</h1>
+					<input id="hour" type="number" min="0" class="time" placeholder="00">
+				</div>
 
-				<input id="hour" type="number" min="0" class="time" placeholder="00"><p id="p1" class="semicolon">:</p>
-				<input id="minute" type="number" max="59" min="0"  class="time" placeholder="00"><p id="p2" class="semicolon">:</p>
-				<input id="seconds" type="number" max="59" min="0"  class="time" placeholder="00">
+				<div class="hour">
+					<h1 class="min_label"> Minutes </h1>
+					<input id="minute" type="number" max="59" min="0"  class="time" placeholder="00">
+				</div>
+
+				
+				<div class="hour">
+					<h1 class="min_label"> Seconds </h1>
+					<input id="seconds" type="number" max="59" min="0"  class="time" placeholder="00">
+				</div>
 
 			</div>
 				
