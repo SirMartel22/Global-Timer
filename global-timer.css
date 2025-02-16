@@ -159,14 +159,13 @@ body{
 	background: rgba(0,0,0,0.9);
 	padding: 2%;
 	border-radius: 15px;
-	/* margin: 40px; */
-	margin-top: -3px;
 	width: 80%;
 	margin-right:120px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	min-height: 75%;
 }
 
 /*timeup container style*/
@@ -209,37 +208,45 @@ body{
 }
 
 .timer-container .timerCounter{
-	display: grid;
-	grid-row: repeat(1, 200px);
-	grid-column: repeat(3, 3fr);
-	align-items: center;
-	justify-content: center;
-	width: 90%;
-}
-/* .timer-container .timerCounter{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	width: 99%;
-} */
+	gap: 10px;
+	width: 100%;
+	min-height: 70%;
+}
+
 
 .timerCounter .box{
-	width: 100%;
+	width: 25%;
+	/* padding: 1%; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* border: 3px solid yellow; */
+	min-height: 100%;
+	height: 100%;
+}
 
+.timerCounter p{
+	font-weight: 600;
+	font-size: 150px;
 }
 
 .timer-container .timerCounter input[type="number"]{
 	text-align: center;
-	font-size: 97%;
+	font-size: 190px;
 	background: none;
 	border: 1px solid #87ebda;
 	border-radius: 10px;
-	width: 25%;
-	padding: 0;
-	margin-right: 10px;
+	width: 100%;
+	padding: 1%;
 	font-family: 'Digital-7';
 }
+
+
 
  /* timer font size for large displays */
 @media screen and (min-width: 1920px){
