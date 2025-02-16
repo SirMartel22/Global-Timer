@@ -5,22 +5,17 @@
         transition: background 0.5s ease;
         font-weight: bold;
     }
-/* 
-   .overlay{
-        padding: 20% 0;
-   } */
+
 
    .header{
         font-size: 35px;
         font-weight: bold;
         text-align: center;
     }
-
     .timer-container{
         margin-right: 0;
         min-height: 80vh;
         gap: 30px;
-
     }
 
     .timer-container .timerCounter{
@@ -59,7 +54,6 @@
         width: 80%;
     }
 
-
     .timer-container .timerCounter input[type="number"]{
         font-size: 70px;
         width: 70%;
@@ -96,6 +90,17 @@
         font-weight: bold;
         font-family: 'gill sans mt';
     }
+
+    /* hidiing the desktop navigation bar */
+    #closeNav {
+        display: none;
+    }
+
+    .mobile-box{
+        display: block;
+    }
+
+
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
