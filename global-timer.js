@@ -157,7 +157,9 @@ function updateTimer(){
 	} else {
 		clearInterval(interval);
 		timerContainer.style.display = 'none';
-		timeUpShow.style.display = 'block';
+		timeUpShow.style.display = 'flex';
+		timeUpShow.style.flexDirection = "column";
+		timeUpShow.style.alignItems = "center";
 	}
 }
 
