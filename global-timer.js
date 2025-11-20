@@ -177,8 +177,8 @@ function calculatePercentage(currentTime, initialTime){
 	//ensure percentage is between 0 and 100
 	return Math.max(0, Math.min(100, percentageRemaining));
 	
-	remainingTime = newCurrentTime
-	console.log(remainingTime);
+	// remainingTime = newCurrentTime
+	// console.log(remainingTime);
 }
 
 // console.log(remainingTime)
